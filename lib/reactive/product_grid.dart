@@ -14,11 +14,11 @@ class ProductGrid extends StatelessWidget {
       crossAxisCount: 2,
       children: products
           .map((product) => ProductSquare(
-        product: product,
-        onTap: () {
-          cartBloc.addition.add(product);
-        },
-      ))
+                product: product,
+                onTap: () {
+                  cartBloc.addition.add(product);
+                },
+              ))
           .toList(),
     );
   }

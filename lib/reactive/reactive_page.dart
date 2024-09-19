@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:reactive_flutter/products.dart';
 import 'package:reactive_flutter/widget/cart_notification.dart';
-import 'package:reactive_flutter/widget/product_square.dart';
 
-import 'product_grid.dart';
 import 'cart_provider.dart';
+import 'product_grid.dart';
 
 class ReactivePage extends StatelessWidget {
   const ReactivePage({super.key});

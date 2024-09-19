@@ -9,11 +9,11 @@ class CartProvider extends InheritedWidget {
 
   @override
   bool updateShouldNotify(covariant InheritedWidget oldWidget) {
-  return true;
+    return true;
   }
 
   static CartBloc of(BuildContext context) =>
       (context.dependOnInheritedWidgetOfExactType<CartProvider>()
-      as CartProvider)
+              as CartProvider)
           .cartBloc;
 }

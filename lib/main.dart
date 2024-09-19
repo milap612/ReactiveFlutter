@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:reactive_flutter/home_page.dart';
 
-import 'reactive/cart_provider.dart';
-import 'reactive/reactive_page.dart';
-
 void main() {
   runApp(const MyApp());
 }

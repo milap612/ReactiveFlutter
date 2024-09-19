@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:rxdart/subjects.dart';
 
-class CartBloc{
+class CartBloc {
   final _cart = [];
 
   Sink<String> get addition => _additionController.sink;
@@ -13,13 +13,12 @@ class CartBloc{
 
   final _itemCountSubject = BehaviorSubject<int>();
 
-  CartBloc(){
+  CartBloc() {
     _additionController.stream.listen(_handle);
   }
 
-  void _handle(String product){
+  void _handle(String product) {
     _cart.add(product);
     _itemCountSubject.add(_cart.length);
   }
-
 }

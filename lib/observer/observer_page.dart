@@ -8,7 +8,7 @@ class ObserverPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _dataProvider = DataProvider();
+    final dataProvider = DataProvider();
     return Scaffold(
       appBar: AppBar(
         actions: const [
@@ -17,7 +17,7 @@ class ObserverPage extends StatelessWidget {
       ),
       body: ObserverGrid(
         onTap: () {
-          _dataProvider.changeCount();
+          dataProvider.changeCount();
         },
       ),
     );

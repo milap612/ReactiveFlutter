@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:reactive_flutter/observer/data_provider.dart';
-import 'package:reactive_flutter/widget/cart_notification.dart';
 
+import '../widget/cart_notification.dart';
+import 'data_provider.dart';
 import 'observable/observer.dart';
 
 class NotificationOne extends StatefulWidget {
@@ -11,14 +11,10 @@ class NotificationOne extends StatefulWidget {
   State<NotificationOne> createState() => _NotificationState();
 }
 
-class _NotificationState extends State<NotificationOne> implements Observer<int> {
+class _NotificationState extends State<NotificationOne>
+    implements Observer<int> {
   final DataProvider _dataProvider = DataProvider();
   int itemCount = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    return CartNotification(count: itemCount);
-  }
 
   @override
   void initState() {
@@ -33,7 +29,14 @@ class _NotificationState extends State<NotificationOne> implements Observer<int>
   }
 
   @override
-  void notifyChange(newValue) {
+  Widget build(BuildContext context) {
+    return CartNotification(
+      count: itemCount,
+    );
+  }
+
+  @override
+  void notifyChange(int newValue) {
     setState(() {
       itemCount = newValue;
     });
